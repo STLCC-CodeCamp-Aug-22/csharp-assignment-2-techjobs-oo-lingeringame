@@ -60,6 +60,8 @@ namespace TechJobsOOTests
             var output = stringWriter.ToString();
 
             //verify
+            //Console.WriteLine(text);
+            //Console.WriteLine(output);
             Assert.AreEqual(text, output, "New Line issue");
         }
 

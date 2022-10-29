@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.IO;
 using TechJobsOO;
 namespace TechJobsTest
 {
@@ -60,7 +61,7 @@ namespace TechJobsTest
         public void TestToStringStartsAndEndsWithNewLine()
         {
             string returned = t6.ToString();
-            Assert.IsTrue(returned[0] == '\n' && returned[^1] == '\n');
+            Assert.IsTrue(returned.Substring(0,2) == "\r\n" && returned.Substring(returned.Length-2, 2) == "\r\n");
         }
         [TestMethod]
         public void TestToStringContainsCorrectLabelsAndData()
@@ -87,6 +88,13 @@ namespace TechJobsTest
             string jobData = t8.ToString();
             Assert.IsTrue(jobData.Contains("Core Competency: Data not available"));
 
+        }
+        [TestMethod]
+        public void EqualFile()
+        {
+            string e = File.ReadAllText("C:\\Users\\icase\\Desktop\\testinFiles\\expected.txt").ToString();
+            string a = File.ReadAllText("C:\\Users\\icase\\Desktop\\testinFiles\\actual.txt").ToString();
+            Assert.AreEqual(e, a, "not equal");
         }
     }
 }

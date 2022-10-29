@@ -43,14 +43,14 @@ namespace TechJobsOO
         }
         public override string ToString()
         {
-            return $"\n" +
-                $"ID: {Id}\n" +
-                $"Name: {(CheckIfFieldValueIsNull(Name) ? "Data not available" : Name)}\n" +
-                $"Employer: {(CheckIfFieldValueIsNull(EmployerName.Value) ? "Data not available" : EmployerName.Value)}\n" +
-                $"Location: {(CheckIfFieldValueIsNull(EmployerLocation.Value) ? "Data not available" : EmployerLocation.Value)}\n" +
-                $"Position Type: {(CheckIfFieldValueIsNull(JobType.Value) ? "Data not available" : JobType.Value)}\n" +
+            return $"\r\n" +
+                $"ID: {Id}\r\n" +
+                $"Name: {(CheckIfFieldValueIsNull(Name) ? "Data not available" : Name)}\r\n" +
+                $"Employer: {(CheckIfFieldValueIsNull(EmployerName.Value) ? "Data not available" : EmployerName.Value)}\r\n" +
+                $"Location: {(CheckIfFieldValueIsNull(EmployerLocation.Value) ? "Data not available" : EmployerLocation.Value)}\r\n" +
+                $"Position Type: {(CheckIfFieldValueIsNull(JobType.Value) ? "Data not available" : JobType.Value)}\r\n" +
                 $"Core Competency: {(CheckIfFieldValueIsNull(JobCoreCompetency.Value) ? "Data not available" : JobCoreCompetency.Value)}" +
-                $"\n";
+                $"\r\n";
         }
         private bool CheckIfFieldValueIsNull(string value)
         {

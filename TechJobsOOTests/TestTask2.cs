@@ -74,7 +74,7 @@ namespace TechJobsOOTests
         {
             //setup
             CoreCompetency testComp = new CoreCompetency("Persistence");
-            CoreCompetency testComp2 = new CoreCompetency("Persistence");
+            CoreCompetency testComp2 = new CoreCompetency("Persistence"); 
 
             Type ccType = typeof(CoreCompetency); 
             MemberInfo[] memberInfos = ccType.GetMembers();

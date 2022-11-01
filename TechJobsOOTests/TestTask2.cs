@@ -63,7 +63,7 @@ namespace TechJobsOOTests
             Console.WriteLine(testLocation.Id);
 
             //verify
-            Assert.AreEqual(2, testLocation.Id, "Second constructor not able to update Id");
+            Assert.AreEqual(8, testLocation.Id, "Second constructor not able to update Id");
             Assert.IsFalse(testLocation.Id == 4, "Second constructor passes value to Id. Is this desirable?");
         }
 
@@ -74,7 +74,7 @@ namespace TechJobsOOTests
         {
             //setup
             CoreCompetency testComp = new CoreCompetency("Persistence");
-            CoreCompetency testComp2 = new CoreCompetency("Persistence");
+            CoreCompetency testComp2 = new CoreCompetency("Persistence"); 
 
             Type ccType = typeof(CoreCompetency); 
             MemberInfo[] memberInfos = ccType.GetMembers();
